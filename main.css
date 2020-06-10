@@ -1,0 +1,30 @@
+#canvas{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#D3_container{
+    height: 700px;
+}
+
+.cell-dead{
+    fill: white;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.cell-alive{
+    fill: black; 
+    stroke: black;
+    stroke-width: 2px;
+}
+
+body{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+rect:hover{
+    fill: red;
+}

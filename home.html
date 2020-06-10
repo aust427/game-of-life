@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Game of Life</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <link rel="stylesheet" href="./main.css">
+        <script src="./cell-patterns.js"></script>
+        <script src="./conway.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Cellular Automata - 2D & 3D Visualization</h1>
+            <p>Paragraph here about general game of life shenanigans</p>         
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-lg-8" id="D3_container">
+                <h2>D3.js</h2>
+                <p>Notes: Cubemap - will check all possible neighbors using the Moore Neighborhood definition, meaning if a cell exists on a face or face edge, it will check all eight neighbors. This is violated, though, if a cell exists on a corner, as it only has 7 possible neighbors. While Conway's rules are still intact, certain patterns will not be stable in a corner neigbhorhood.</p>
+                <div class='options'>
+                    <select id="select_rule"></select>
+                    <select id="select_map"></select>
+                    <select id="celect_cell"></select>
+                    <button type="button" id="button-next">Next</button>
+                    <button type="button" id="button-start">Start</button>
+                    <button type="button" id="button-pause">Pause</button>
+                    <button type="button" id="button-reset">Reset</button>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4" id="THREE_container">
+                <h2>Three.js</h2>
+                <div id="canvas">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
